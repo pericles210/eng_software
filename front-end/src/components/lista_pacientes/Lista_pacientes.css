@@ -1,0 +1,51 @@
+.page{
+    position: fixed;
+    left: 100px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.page_header{
+    position: fixed;
+}
+
+.grid-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 90px 500px 200px 200px 200px 200px;
+    grid-gap: 10px;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 0px 0;
+    font-size: 25px;
+    height: 35px;
+}
+
+.pacient_row{
+    overflow-y: scroll;
+    position: inherit;
+    height: 70%;
+    top: 200px;
+    align-items: center;
+
+}
+
+.op_lista{
+    position: fixed;
+    top: 100px;
+    display: flex;
+    /* top: 300px; */
+}
+
+.op_lista > Button{
+    margin-left: 15px;
+    margin-right: 15px;
+}

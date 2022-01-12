@@ -1,0 +1,30 @@
+.Login_container{
+    position: fixed;
+    left: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.Login{
+    margin: auto;
+    background-color: antiquewhite;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Login_content{
+    position: relative;
+    top: -30px;
+    margin: 0;
+}
+
+.message_content{
+    position: relative;
+    width: 100%;
+}

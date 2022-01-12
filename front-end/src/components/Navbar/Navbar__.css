@@ -1,0 +1,19 @@
+.side_body{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background-color: beige;
+}
+
+.Navlink_p{
+    font-size: 25px;
+    margin: 0;
+}
+
+.Navbrand_p{
+    font-size: 35px;
+}
+
+.Brand{
+    margin: 20px;
+}
