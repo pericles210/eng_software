@@ -38,15 +38,15 @@ export default function Profile({id}){
 
     console.log('profile ' + id);
     return (
-      <div className="page">
+      <div className="page-prof">
         <div className="body-profile">
-          <div className="col-left">
+          <div className="col-left-prof">
             <img
               className="img_profile"
               src="https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png"
             />
           </div>
-          <div className="col-right">
+          <div className="col-right-prof">
             <form>
               <label for="name">Nome:</label>
               <br />

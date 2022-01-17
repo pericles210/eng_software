@@ -24,40 +24,42 @@ export default function App() {
 
   return (
     <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Navbar__ />}></Route>
-          <Route path="/login" element={[<Login />, <Navbar__ />]}></Route>
-          <Route
-            path="/login/recuperar"
-            element={[<Recovery />, <Navbar__ />]}
-          ></Route>
-          <Route
-            path="/medico/lista_pacientes"
-            element={[<Lista_pacientes />, <Navbar__ />]}
-          ></Route>
-          <Route
-            path="/cadastrar"
-            element={[<Register />, <Navbar__ />]}
-          ></Route>
-          <Route
-            path="/paciente/dados"
-            element={[
-              <Profile id={localStorage.getItem("profile_id")} />,
-              <Navbar__ />,
-            ]}
-          ></Route>
-          <Route
-            path="/paciente/historico"
-            element={[
-              <Historico_paciente id={localStorage.getItem("profile_id")} />,
-              <Navbar__ />,
-            ]}
-          ></Route>
+      <div className="body">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Navbar__ />}></Route>
+            <Route path="/login" element={[<Login />, <Navbar__ />]}></Route>
+            <Route
+              path="/login/recuperar"
+              element={[<Recovery />, <Navbar__ />]}
+            ></Route>
+            <Route
+              path="/medico/lista_pacientes"
+              element={[<Lista_pacientes />, <Navbar__ />]}
+            ></Route>
+            <Route
+              path="/cadastrar"
+              element={[<Register />, <Navbar__ />]}
+            ></Route>
+            <Route
+              path="/paciente/dados"
+              element={[
+                <Profile id={localStorage.getItem("profile_id")} />,
+                <Navbar__ />,
+              ]}
+            ></Route>
+            <Route
+              path="/paciente/historico"
+              element={[
+                <Historico_paciente id={localStorage.getItem("profile_id")} />,
+                <Navbar__ />,
+              ]}
+            ></Route>
 
-          <Route path="/teste" element={[<Teste_fetch />]}></Route>
-        </Routes>
-      </Router>
+            <Route path="/teste" element={[<Teste_fetch />]}></Route>
+          </Routes>
+        </Router>
+      </div>
     </AuthProvider>
   );
 

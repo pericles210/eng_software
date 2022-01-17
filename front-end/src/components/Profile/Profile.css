@@ -1,4 +1,4 @@
-.page{
+.page-prof{
     position: fixed;
     left: 100px;
     background-color: antiquewhite;
@@ -15,12 +15,12 @@
     display: flex;
 }
 
-.col-left{
+.col-left-prof{
     margin-right: 50px;
     align-self: center;
     align-self: center;
 }
-.col-right{
+.col-right-prof{
     margin-left: 50px;
     justify-content: center;
     align-self: center;

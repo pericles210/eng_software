@@ -1,4 +1,4 @@
-body {
+.body-a {
     /* position: absolute;
     left: 0;
     top: 0;
@@ -8,6 +8,8 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center; */
+    width: 100vw;
+    height: 100vh;
 }
 
 .test{

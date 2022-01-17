@@ -1,10 +1,19 @@
 import React, {useState} from "react";
 import './Historico_paciente.css';
 import Cookies from 'js-cookie';
+import { Button } from 'reactstrap';
 
 export default function Historico_paciente({id}){
 
     const [loaded_data, set_loaded_data] = useState({data: ''});
+
+    const remove_patient = () => {
+        const response = fetch('http://127.0.0.1:8000/api/paciente/historico', {
+            method: "POST",
+            body: JSON.stringify({id: id, token: Cookies.get('token')})
+        });
+        const data_b = response.json();
+    }
 
     const load_data = async() => {
         const response = fetch('http://127.0.0.1:8000/api/paciente/historico', {
@@ -52,15 +61,28 @@ export default function Historico_paciente({id}){
       const nome = ' -- replace -- ';
       
       return (
-        <div className="page">
-          <h1 className="page_header">Paciente {nome}</h1>
-          <div className="patient_row">{linhas_lista}</div>
+        <div className="page-hist">
+          <h1 className="page_header-hist">Paciente {nome}</h1>
+          <div className="op_lista-hist">
+            <Button
+              color="danger"
+              size="lg"
+              onClick={remove_patient}
+              href="/medico/lista_pacientes"
+            >
+              Remover
+            </Button>
+            <Button color="warning" size="lg">
+              Trocar sensor
+            </Button>
+          </div>
+          <div className="patient_row-hist">{linhas_lista}</div>
         </div>
       );
 }
 
 var dados = [
-    ['data', 'hora', 'Temp (ºC)', 'Freq (BPM)', 'Oxi (SaO2)', 'Pressão (mmHg)'],
+    ['data', 'hora', 'ºC', 'BPM', 'SaO2', 'mmHg'],
     ['01/01/2022', '12:12:12', 84, 120, 123, 456],
     ['01/01/2022', '12:12:12', 84, 120, 123, 456],
     ['01/01/2022', '12:12:12', 84, 120, 123, 456],

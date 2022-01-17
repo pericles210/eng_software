@@ -52,23 +52,23 @@ let linhas_lista = dados.map((x) => (
 
 return (
   <div className="page">
-    <h1 className="page_header">Lista de pacientes</h1>
+    <h1>Lista de pacientes</h1>
     <div className="op_lista">
       <Button color="success" size="lg">
         Adicionar
       </Button>
-      <Button color="danger" size="lg">
-        Remover
-      </Button>
+      <div>
+        <Button color="light" size='lg' onClick={load_data}>Atualizar</Button>
+      </div>
     </div>
-    
+
     <div className="patient_row">{linhas_lista}</div>
   </div>
 );
 }
 
 var dados = [
-    ['id', 'Nome', 'Temp (ºC)', 'Freq (BPM)', 'Oxi (SaO2)', 'Pressão (mmHg)'],
+    ['id', 'Nome', 'ºC', 'BPM', 'SaO2', 'mmHg'],
     [0, 'pericles', 84, 120, 123, 456],
     [1, 'izumi', 84, 120, 123, 456],
     [1, 'izumi', 84, 120, 123, 456],
