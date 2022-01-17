@@ -12,12 +12,11 @@ export default function Login(){
     const [submissionAns, setSubmissionAns] = useState('');
 
     const onSubmit = () => {
-      fetch('http://127.0.0.1:8000/api/login/', {
+      const response = fetch('http://127.0.0.1:8000/api/login/', {
           method: "POST",
           body: JSON.stringify({user: user, password: pass})
       });
 
-      const response = fetch("http://127.0.0.1:8000/api/login/status");
       // setSubmissionAns('failed');
       // const data = response.json();
       // if(data.submissionAns == 'true'){

@@ -1,24 +1,29 @@
 import './Lista_pacientes.css';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from 'reactstrap';
 import AuthContext, { useAuth } from "../../context/auth-context";
 import Cookies from 'js-cookie';
-
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 
 export default function Lista_pacientes(){
 
-  const [state, setState] = useState(
-    {
-      people: []
-    }
-  );
+  const [loaded_data, set_loaded_data] = useState({data: ''});
 
-  const loadData = async () => {
+  const load_data = async () => {
     const response = await fetch("http://127.0.0.1:8000/api/json_response/");
-    const data = await response.json();
-    setState(data);
+    const data_a = await response.json();
+    set_loaded_data({data: data_a});
   };
 
+  const update_content = () => {
+    setInterval(()=>{
+      load_data();
+    }, 1000);
+  }
+
+  // useEffect(() => {
+  //   update_content();
+  // }, []);
 
 
 let linhas_lista = dados.map((x) => (
@@ -34,7 +39,7 @@ let linhas_lista = dados.map((x) => (
     {
       x[1] != 'Nome' &&
       <div className="item2">
-        <a href='/'>{x[1]}</a>
+        <a href='/paciente/historico' onClick={() => {localStorage.setItem('profile_id', x[0])}}>{x[1]}</a>
       </div>
     }
     
@@ -46,19 +51,18 @@ let linhas_lista = dados.map((x) => (
 ));
 
 return (
-  <div>
-    <div className="page">
-      <h1 className="page_header">Lista de pacientes</h1>
-      <div className="op_lista">
-        <Button color="success" size="lg">
-          Adicionar
-        </Button>
-        <Button color="danger" size="lg">
-          Remover
-        </Button>
-      </div>
-      <div className="pacient_row">{linhas_lista}</div>
+  <div className="page">
+    <h1 className="page_header">Lista de pacientes</h1>
+    <div className="op_lista">
+      <Button color="success" size="lg">
+        Adicionar
+      </Button>
+      <Button color="danger" size="lg">
+        Remover
+      </Button>
     </div>
+    
+    <div className="patient_row">{linhas_lista}</div>
   </div>
 );
 }

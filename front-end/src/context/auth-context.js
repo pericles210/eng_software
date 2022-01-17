@@ -4,8 +4,6 @@ const AuthContext = createContext();
 
 export default function AuthProvider({children}){
     const [isLoggedIn, setIsLoggedIn] = useState();
-    console.log('set');
-    localStorage.setItem('isLoggedIn', isLoggedIn);
     
     return (
       <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>

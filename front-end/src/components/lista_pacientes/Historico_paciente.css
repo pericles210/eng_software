@@ -12,16 +12,16 @@
     position: fixed;
 }
 
-.grid-container {
+.grid-container-hist {
     position: relative;
     display: grid;
-    grid-template-columns: 90px 500px 200px 200px 200px 200px;
+    grid-template-columns: 250px 250px 200px 200px 200px 200px;
     grid-gap: 10px;
     background-color: antiquewhite;
     padding: 10px;
 }
 
-.grid-container > div {
+.grid-container-hist > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 0px 0;
@@ -31,10 +31,11 @@
 
 .patient_row{
     overflow-y: scroll;
-    height: 70%;
     position: inherit;
+    height: 70%;
     top: 200px;
     align-items: center;
+
 }
 
 .op_lista{

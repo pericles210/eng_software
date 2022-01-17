@@ -25,7 +25,7 @@ export default function Navbar__(){
             <NavLink href="#"><p className="Navlink_p"> <IoIosNotifications/> Notificações</p></NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#"><p className="Navlink_p"> <IoMdCheckmark/> Cadastrar</p></NavLink>
+            <NavLink href="/cadastrar"><p className="Navlink_p"> <IoMdCheckmark/> Cadastrar</p></NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/login/"><p className="Navlink_p"> <IoIosLogIn/> Entrar</p></NavLink>
