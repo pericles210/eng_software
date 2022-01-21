@@ -10,8 +10,11 @@ import AuthContext, { useAuth } from "./context/auth-context";
 import Cookies from 'js-cookie';
 import Profile from "./components/Profile/Profile";
 import Historico_paciente from "./components/lista_pacientes/Historico_paciente";
+import Lista_medicos from "./components/Lista_medicos/Lista_medicos";
+import Lista_sensores from "./components/Lista_sensores/Lista_sensores";
 import './styles.css';
 
+import Teste1 from "./components/Teste/Teste1";
 import Teste_fetch from "./components/Teste/Teste_fetch";
 
 export default function App() {
@@ -55,8 +58,23 @@ export default function App() {
                 <Navbar__ />,
               ]}
             ></Route>
+            <Route
+              path="/lista_medicos"
+              element={[
+                <Lista_medicos />,
+                <Navbar__ />,
+              ]}
+            ></Route>
+            <Route
+              path="/lista_sensores"
+              element={[
+                <Lista_sensores />,
+                <Navbar__ />,
+              ]}
+            ></Route>
 
             <Route path="/teste" element={[<Teste_fetch />]}></Route>
+            <Route path="/teste1" element={[<Teste1 />]}></Route>
           </Routes>
         </Router>
       </div>

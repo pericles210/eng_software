@@ -1,11 +1,11 @@
 .Login_container{
     position: fixed;
-    left: 125px;
+    left: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
+    width: calc(100% - 250px);;
 }
 
 .Login{

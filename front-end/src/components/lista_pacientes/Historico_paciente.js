@@ -5,8 +5,9 @@ import { Button } from 'reactstrap';
 
 export default function Historico_paciente({id}){
 
-    const [loaded_data, set_loaded_data] = useState({data: ''});
+    const [loaded_data, set_loaded_data] = useState({data: ''}); // todo os dados vitais historicos do pacientes são carregados do servidor e guardados aqui 
 
+    // para parar de monitorar o paciente, enviar dados para remoção do paciente
     const remove_patient = () => {
         const response = fetch('http://127.0.0.1:8000/api/paciente/historico', {
             method: "POST",
@@ -15,6 +16,7 @@ export default function Historico_paciente({id}){
         const data_b = response.json();
     }
 
+    // requisitar o historico dos dados para o servidor
     const load_data = async() => {
         const response = fetch('http://127.0.0.1:8000/api/paciente/historico', {
             method: "POST",
@@ -24,6 +26,7 @@ export default function Historico_paciente({id}){
         set_loaded_data({data: data_a});
     }
 
+    // se a pagina ficar aberta, periodicamente devemos atualizar a pagina, pois o sensor tambem faz leituras periodicas
     const update_content = () => {
         setInterval(()=>{
             load_data();
@@ -34,6 +37,7 @@ export default function Historico_paciente({id}){
     //   update_content();
     // }, []);
 
+    // do historico de dados vitais, organizar para exibição
     let linhas_lista = dados.map((x) => (
         <div className="grid-container-hist">
           <div className="item1">{x[0]}</div>
@@ -58,7 +62,7 @@ export default function Historico_paciente({id}){
         </div>
       ));
 
-      const nome = ' -- replace -- ';
+      let nome = ' -- replace -- ';
       
       return (
         <div className="page-hist">

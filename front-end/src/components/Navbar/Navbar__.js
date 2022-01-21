@@ -41,8 +41,8 @@ export default function Navbar__(){
 
 const submenus = [
   [
-    ["Médicos", ""],
+    ["Médicos", "/lista_medicos"],
     ["Pacientes", "/medico/lista_pacientes"],
-    ["Sensores", ""],
+    ["Sensores", "/lista_sensores"],
   ],
 ];

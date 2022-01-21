@@ -3,6 +3,7 @@ import { Button } from "reactstrap";
 import './Profile.css';
 import Cookies from 'js-cookie';    
 
+// esse componente serve para atualizar os dados cadastrais do usuario
 export default function Profile({id}){
     const response = fetch('http://127.0.0.1:8000/api/profile/', {
         method: "POST",
