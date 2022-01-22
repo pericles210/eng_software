@@ -68,7 +68,7 @@ export default function Register () {
             <textarea id="comorbidity" rows="4" cols="24"></textarea>
             <br />
 
-            <label for="image">Foto do perfil:</label>
+            <label for="image">Foto de perfil:</label>
             <br />
             <input type="file" id="image"></input>
             <br />

@@ -5,7 +5,12 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: calc(100% - 250px);;
+    width: calc(100% - 250px);
+    background-color: black;
+    background-image: url('https://img.freepik.com/fotos-gratis/interior-borrado-do-hospital-ou-clinico-com-povos-fundo-medico-abstrato_1484-1309.jpg?size=626&ext=jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .Login{

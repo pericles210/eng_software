@@ -26,9 +26,9 @@
 
 .patient_row{
     overflow-y: scroll;
-    height: 70%;
-    min-width: 70%;
-    /* position: inherit; */
+    height: calc(100% - 200px);
+    /* min-width: 70%; */
+    width: 100%;
     position: absolute;
     top: 200px;
     align-items: center;

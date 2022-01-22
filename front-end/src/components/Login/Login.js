@@ -26,6 +26,12 @@ export default function Login(){
         // Cookies.set('isLoggedIn', data.isLoggedIn);
         // Cookies.set('token', data.token);
       // }
+      localStorage.setItem('duration_msg', 3);
+      localStorage.setItem('msg', 'usuario logado!!!');
+      let x = localStorage.getItem('flag_msg');
+
+      localStorage.setItem('flag_msg', x == undefined ? 0 : x + 0);
+      
     }
 
     // cada letra digitada do usuario vai ser guardada no usestate
