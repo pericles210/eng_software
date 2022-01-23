@@ -73,8 +73,8 @@ export default function App() {
               ]}
             ></Route>
 
-            <Route path="/teste" element={[<Teste_fetch />]}></Route>
             <Route path="/teste1" element={[<Teste1 />]}></Route>
+            <Route path="/teste" element={[<Teste_fetch />]}></Route>
           </Routes>
         </Router>
       </div>

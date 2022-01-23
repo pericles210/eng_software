@@ -19,6 +19,7 @@ export default function Login(){
       });
 
       // setSubmissionAns('failed');
+      setSubmissionAns('failed');
       // const data = response.json();
       // if(data.submissionAns == 'true'){
         // setSubmissionAns(data.submissionAns);
@@ -26,11 +27,6 @@ export default function Login(){
         // Cookies.set('isLoggedIn', data.isLoggedIn);
         // Cookies.set('token', data.token);
       // }
-      localStorage.setItem('duration_msg', 3);
-      localStorage.setItem('msg', 'usuario logado!!!');
-      let x = localStorage.getItem('flag_msg');
-
-      localStorage.setItem('flag_msg', x == undefined ? 0 : x + 0);
       
     }
 
@@ -43,6 +39,11 @@ export default function Login(){
     const onChangePass = (e) => {
       setPass(e.target.value);
     }
+
+    // da um clear na mensagem no status do login
+    (submissionAns == 'failed' || submissionAns == 'success') && setTimeout(() => {
+      setSubmissionAns('a')
+    }, 5000)
 
     // jsx do formulario de login
     let login_form_jsx = (
@@ -83,6 +84,9 @@ export default function Login(){
         </Button>
         {submissionAns == "failed" && (
           <div className="message_content">Usuário ou senha incorretos.</div>
+        )}
+        {submissionAns == "success" && (
+          <div className="message_content">Conectado</div>
         )}
       </form>
     );

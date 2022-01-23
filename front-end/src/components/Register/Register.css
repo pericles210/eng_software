@@ -14,22 +14,9 @@
 }
 
 .Register{
-    margin: auto;
     background-color: antiquewhite;
-    height: 700px;
+    height: 70%;
+    padding: 50px 50px 50px 50px;
     width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Login_content{
-    position: relative;
-    top: -30px;
-    margin: 0;
-}
-
-.message_content{
-    position: relative;
-    width: 100%;
+    overflow: scroll;
 }

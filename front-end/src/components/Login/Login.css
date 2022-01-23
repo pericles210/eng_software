@@ -14,7 +14,6 @@
 }
 
 .Login{
-    margin: auto;
     background-color: antiquewhite;
     height: 500px;
     width: 400px;
@@ -24,12 +23,11 @@
 }
 
 .Login_content{
-    position: relative;
-    top: -30px;
-    margin: 0;
+    background-color: white;
 }
 
 .message_content{
     position: relative;
     width: 100%;
+    text-align: center;
 }

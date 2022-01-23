@@ -18,7 +18,6 @@ export default function Teste_fetch(){
     
     const update_content = () => {
         setInterval(()=>{
-            console.log('refresh');
             load_data();
         }, 1000);
     }
@@ -30,7 +29,9 @@ export default function Teste_fetch(){
     print = daata['foo'];
 
     return (
-      <div>{print}</div>
+      <div>
+        {print}
+      </div>
       // <div>{data}</div>
       // <div>{response}</div>
     );
