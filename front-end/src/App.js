@@ -12,6 +12,7 @@ import Profile from "./components/Profile/Profile";
 import Historico_paciente from "./components/lista_pacientes/Historico_paciente";
 import Lista_medicos from "./components/Lista_medicos/Lista_medicos";
 import Lista_sensores from "./components/Lista_sensores/Lista_sensores";
+import Reports from "./components/Relatorios/Reports";
 import './styles.css';
 
 import Teste1 from "./components/Teste/Teste1";
@@ -20,7 +21,8 @@ import Teste_fetch from "./components/Teste/Teste_fetch";
 export default function App() {
 
   if(Cookies.get('username') == undefined){
-    Cookies.set('username', '');
+    Cookies.set('username', 'Teste');
+    Cookies.set('user_id', '');
     Cookies.set('isLoggedIn', false);
     Cookies.set('token', '');
   }
@@ -69,6 +71,13 @@ export default function App() {
               path="/lista_sensores"
               element={[
                 <Lista_sensores />,
+                <Navbar__ />,
+              ]}
+            ></Route>
+            <Route
+              path="/relatorios"
+              element={[
+                <Reports />,
                 <Navbar__ />,
               ]}
             ></Route>

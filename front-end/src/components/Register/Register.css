@@ -15,8 +15,9 @@
 
 .Register{
     background-color: antiquewhite;
-    height: 70%;
+    height: 100%;
     padding: 50px 50px 50px 50px;
     width: 400px;
     overflow: scroll;
 }
+

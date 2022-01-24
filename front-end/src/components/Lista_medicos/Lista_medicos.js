@@ -25,18 +25,14 @@ export default function Lista_medicos(){
       <div className="item">{x[2]}</div>
 
       <div className="item">{x[3]}</div>
-      <div className="button">
-        <Button color="primary" size="lg">
+      <div className="button_l">
+        <Button color="primary" size="sm">
           Info
         </Button>
-      </div>
-      <div className="button">
-        <Button color="danger" size="lg">
+        <Button color="danger" size="sm">
           Remov
         </Button>
-      </div>
-      <div className="button">
-        <Button color="success" size="lg">
+        <Button color="success" size="sm">
           Pacientes
         </Button>
       </div>
@@ -44,10 +40,12 @@ export default function Lista_medicos(){
   ));
   
   return (
-    <div className="page-l_medicos">
+    <>
+      <div className="page-l_medicos">
       <h1>Lista de médicos</h1>
-      <div className="patient_row-l_medicos">{linhas_lista}</div>
-    </div>
+        <div className="patient_row-l_medicos">{linhas_lista}</div>
+      </div>
+    </>
   );
   }
   

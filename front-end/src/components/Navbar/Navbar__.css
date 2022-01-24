@@ -17,3 +17,18 @@
 .Brand{
     margin: 20px;
 }
+
+.User{
+    position: fixed;
+    bottom: 5px;
+    margin: 20px;
+}
+
+.User_img{
+    width: 60px;
+    margin: 10px;
+}
+
+.Button-nav-bottom{
+    margin: 5px;
+}

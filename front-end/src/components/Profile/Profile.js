@@ -37,14 +37,13 @@ export default function Profile({id}){
         console.log('');
     }
 
-    console.log('profile ' + id);
     return (
       <div className="page-prof">
         <div className="body-profile">
           <div className="col-left-prof">
             <img
               className="img_profile"
-              src="https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png"
+              src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
             />
           </div>
           <div className="col-right-prof">

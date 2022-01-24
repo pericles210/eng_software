@@ -76,8 +76,8 @@ export default function Historico_paciente({id}){
             >
               Remover
             </Button>
-            <Button color="warning" size="lg">
-              Trocar sensor
+            <Button color="dark" size="lg">
+              Gerar relatório
             </Button>
           </div>
           <div className="patient_row-hist">{linhas_lista}</div>
